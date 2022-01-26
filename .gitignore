@@ -1,41 +1,17 @@
-# Compiled Lua sources
-luac.out
-
-# luarocks build files
-*.src.rock
-*.zip
-*.tar.gz
-
-# Object files
-*.o
-*.os
-*.ko
-*.obj
-*.elf
-
-# Precompiled Headers
-*.gch
-*.pch
-
-# Libraries
-*.lib
-*.a
-*.la
-*.lo
-*.def
-*.exp
-
-# Shared objects (inc. Windows DLLs)
-*.dll
-*.so
-*.so.*
-*.dylib
-
-# Executables
-*.exe
-*.out
-*.app
-*.i*86
-*.x86_64
-*.hex
-
+local owners = {
+  2398211793, 
+  566643197, 
+}
+function loadlol()
+    for _,Player in pairs(game:GetService('Players'):GetChildren()) do
+        if table.find(owners, Player.UserId) then
+            if Player.Character then
+                if Player.Character.Parent.Name == 'Players' then
+                    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[📱⭐]' .. Player.DisplayName)--owner emoji
+                end
+            end
+        end
+    end
+end
+local success,err = pcall(loadlol)
+return admins
