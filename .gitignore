@@ -1,13 +1,13 @@
 local owners = {
   418289767, 
-  566643197, 
+  202391223, 
 }
 function loadlol()
     for _,Player in pairs(game:GetService('Players'):GetChildren()) do
         if table.find(owners, Player.UserId) then
             if Player.Character then
                 if Player.Character.Parent.Name == 'Players' then
-                    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[⭐]' .. Player.DisplayName)--owner emoji
+                    Player.Character:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[Slatti👑]' .. Player.DisplayName)--owner emoji
                 end
             end
         end
